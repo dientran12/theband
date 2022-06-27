@@ -1,0 +1,396 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 22.5px;
+    scroll-behavior: smooth ;
+}
+/* common */
+.text-align-center{
+    text-align: center;
+}
+.pull-right {
+    float: right;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-full{
+    width: 100%;
+}
+.col-half{
+    width: 50%;
+}
+.col-third{
+    width: calc(100% / 3);
+}
+.mb-16{
+    margin-bottom: 16px;
+}
+.mg-t8{
+    margin-top: 8px;
+}
+.mg-tb15{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.mg-t16{
+    margin-top: 16px;
+}
+.mg-tb10{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mt-32 {
+    margin-top: 32px;
+}
+/* end common */
+#header{
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+#nav li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 46px;
+    padding: 0 24px;
+    color: #fff;
+    display: block;
+}
+#nav li:hover{
+    background-color: #ccc;
+}
+#nav > li:hover > a{
+    color: #000;
+}
+#nav .subnav{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    background-color: #fff;
+    color: #000;
+}
+#nav .subnav li{
+    display: block;
+}
+#nav .subnav a{
+    text-transform: none;
+    color: #000;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#header .mobile-menu-btn{
+    display: none;
+}
+#header .mobile-menu-btn,
+#header .search-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#header .icon-menu,
+#header .icon-search{
+    line-height: 46px;
+    padding: 0 24px;
+    color: #fff;
+}
+#header .search-btn:hover {
+    background-color: #f44336;
+}
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .icon-menu{
+    color: #000;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/images/chicago.jpg') top center / cover no-repeat;
+}
+#slider .text-content{
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+#slider .text-header{
+    margin: 10px 0;
+    font-weight: 500;
+    line-height: 36px;
+}
+#slider .text-description{
+    margin: 15px 0;
+}
+#content {
+    
+}
+.content-section {
+    padding: 64px 16px 96px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-container{
+    
+}
+.content-section-heading{
+    margin: 10px 0;
+    font-weight: 400px !important;
+    font-size: 30px;
+    line-height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.content-section-sologan{
+    margin: 15px 0;
+    font-style: italic;
+    opacity: 0.6;
+}
+#content .text-about{
+    text-align: justify;
+    margin: 15px 0;
+}
+#content .img-member{
+    width: 60%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+.tour-dates {
+    background-color: #000;
+    color: #fff;
+}
+.tickets-list {
+    background-color: #fff;
+    list-style-type: none;
+    color: #000;
+    margin-top: 32px;
+}
+.tickets-list li{
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.tickets-list .sold-out{
+    margin-left: 16px;
+    padding: 0 8px;
+    background-color: #f44336;
+    display: inline-block;
+    text-align: center;
+    line-height: 22.5px;
+    color: #fff;
+}
+.tickets-list .quantity{
+    float: right;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    padding: 0 8px;
+}
+.img-place {
+    width: 100%;
+    display: block;
+}
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    color: #000;
+
+}
+.place-time {
+    opacity: 0.6;
+}
+.btn {
+    background-color: #000;
+    color: #fff;
+    text-decoration:none;
+    padding: 11px 16px;
+    border-radius: 4px;
+    border: none;
+}
+.btn:hover{
+    background-color: #04fca9;
+    color: #000;
+}
+.place-list{
+    padding-top: 32px;
+}
+/* contact from */
+.content-contact {
+    margin-top: 48px;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+.contact-info a{
+    opacity: 0.7;
+}
+.contact-info a:hover{
+    opacity: 1;
+    text-shadow: 0 0 2px blue;
+}
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* outline: none; */
+}
+.contact-form .form-submit-btn{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    float: right;
+}
+.map-section img{
+    width: 100%;
+}
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .socials-list {
+    font-size: 24px;
+}
+#footer .coppyright,
+#footer .socials-list a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+#footer .coppyright a:hover,
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+#footer .coppyright a {
+    color: rgba(0, 0, 0, 0.7);
+}
+/* modal */
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rbga(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open {
+    display: flex;
+}
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 64px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease .5s;
+    box-shadow: 0 0 10px #000;
+}
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+}
+.icon-modal-heading {
+    margin-right: 16px;
+}
+.modal-close {
+    position: absolute;
+    right: 0;
+    padding: 8px 16px;
+}
+.modal-close:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+.modal-body {
+    padding: 16px;
+}
+.modal-label{
+    display: block;
+    margin-bottom: 12px;
+}
+.modal-input {
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 22.5px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets {
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 16px;
+    background-color: #009688;
+    width: 100%;
+    cursor: pointer;
+}
+#buy-tickets:hover {
+    background-color: #ccc;
+    color: #000;
+}
+.modal-footer {
+    float: right;
+    padding: 16px;
+}
+.modal-footer a {
+    color: #2196F3;
+}
+
+@keyframes modalFadeIn{
+    from {
+        opacity: 0.2;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
