@@ -16,9 +16,10 @@
     }
     .contact-form .form-control {
         padding: 15px;
+        font-size: 16px;
     }
     #footer .socials-list {
-        font-size: 42px;
+        font-size: 32px;
     }
     #footer a {
         margin: 0 8px;
@@ -26,6 +27,9 @@
     #footer .coppyright a{
         padding: 12px 0;
         display: inline-block;
+    }
+    .btn {
+        font-size: 16px;
     }
 }
 /* mobile phone */
